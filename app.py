@@ -61,10 +61,10 @@ class HareQuotaVoting:
       
 
 # st.set_page_config(page_title="Borda Count Selection", layout="wide")
-st.set_page_config(page_title="Borda Count Selection")
-st.header("Borda Count Selection System")
+st.set_page_config(page_title="Hare Quota Voting")
+st.header("Hare Quota Voting System")
 st.write("""This app leverages a Borda Count system to award points to competitors in a ranked order""")
-st.markdown("Here is a **[link](https://en.wikipedia.org/wiki/Borda_count)** to learn more about the Borda Count method.")
+st.markdown("Here is a **[link](https://en.wikipedia.org/wiki/Hare_quota)** to learn more about the Hare Quota voting system.")
 uploaded_data = st.file_uploader("Upload the file containing the rank", type=["csv", "xlsx"])
 
 if uploaded_data is not None:
