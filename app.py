@@ -68,6 +68,8 @@ st.markdown("Here is a **[link](https://en.wikipedia.org/wiki/Hare_quota)** to l
 
 with st.expander("Open to see instructions on the data format that works well with this website"):
     st.write("""The format of the data that works well with the algorithm needs the choices listed as columns with each observations representing the voters' decisions""")
+    st.write("""This is useful for selecting the right columns for running the algo.""")
+    
     test_data = pd.read_excel("data.xlsx")
     st.write("Below is a sample of the data")
     st.dataframe(test_data.head(3), use_container_width=True)
