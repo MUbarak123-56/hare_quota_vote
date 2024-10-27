@@ -65,6 +65,13 @@ st.set_page_config(page_title="Hare Quota Voting")
 st.header("Hare Quota Voting System")
 st.write("""This app leverages a Hare Quota voting system to elect candidates in an election""")
 st.markdown("Here is a **[link](https://en.wikipedia.org/wiki/Hare_quota)** to learn more about the Hare Quota voting system.")
+
+with st.expander("Open to see instructions on the data format that works well with this website"):
+    st.write("""The format of the data that works well with the algorithm needs the choices listed as columns with each observations representing the voters' decisions""")
+    test_data = pd.read_excel("data.xlsx")
+    st.write("Below is a sample of the data")
+    st.dataframe(test_data.head(3), use_container_width=True)
+    
 uploaded_data = st.file_uploader("Upload the file containing the rank", type=["csv", "xlsx"])
 
 if uploaded_data is not None:
