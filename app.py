@@ -102,7 +102,7 @@ if uploaded_data is not None:
       for i in range(n):
           order_dict[choice_order[i]] = n - i - 1
       final_df = final.replace(list(order_dict.keys()), list(order_dict.values()))
-      ballots = list(np.array(final_df))
+      ballots = final_df.tolist()
       candidates = list(new_array)
       seats = num_candidates
       # rank_df = pd.DataFrame(final_df.sum(axis=0))
