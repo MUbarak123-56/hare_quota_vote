@@ -79,11 +79,11 @@ uploaded_data = st.file_uploader("Upload the file containing the rank", type=["c
 if uploaded_data is not None:
   if "xlsx" in str(uploaded_data.name):
     df = pd.read_excel(uploaded_data)
-    st.write("A preview of the data")
+    st.write("A preview of the uploaded data")
     st.dataframe(df.head(3), use_container_width=True)
   elif "csv" in str(uploaded_data.name):
     df = pd.read_csv(uploaded_data)
-    st.write("A preview of the data")
+    st.write("A preview of the uploaded data")
     st.dataframe(df.head(3), use_container_width=True)
   else:
     df = pd.DataFrame()
@@ -143,3 +143,5 @@ if uploaded_data is not None:
       st.markdown("**Elected candidates:**")
       for val in result:
         st.write(val)
+  else:
+     st.error("Please upload a data set with multiple observations")
