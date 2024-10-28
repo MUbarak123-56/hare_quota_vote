@@ -142,6 +142,6 @@ if uploaded_data is not None:
 
       st.markdown("**Elected candidates:**")
       for i in range(len(result)):
-        st.write("Choice ", str(i+1), ":", result[i])
+        st.write("Number ", str(i+1), ":", result[i])
   else:
      st.error("Please upload a data set with multiple observations")
