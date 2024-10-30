@@ -94,7 +94,7 @@ if uploaded_data is not None:
     num_candidates = st.number_input("How many candidates would you like to select?", value = 0)
     st.write("Use the widget below to select the columns for voting. Select them in order of their rank")
     with st.form(key="Selecting columns"):
-      choices = st.multiselect("Make your selections", list(df.columns))
+      choices = st.multiselect("Make your selections", list(df.columns), placeholder="Select the columns in order of rank")
       submit_button = st.form_submit_button(label="Submit")
       
     if submit_button:
